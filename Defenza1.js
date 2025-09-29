@@ -28,17 +28,7 @@ function miFuncion(productos) {
   return { caros, baratos };
 }
 
-let productos = [
-  { nombre: 'cuaderno', precio: 30 },
-  { nombre: 'estuche', precio: 60 },
-  { nombre: 'cuaderno', precio: 40 }
-];
-const { caros, baratos } = miFuncion(productos);
-console.log(caros, baratos);
-
 // Ejercicio 2
-let carrito_productos = [];
-let carrito_total = 0;
 
 function esperar(ms) {
   return new Promise(resolve => {
@@ -66,7 +56,7 @@ function calcular_impuesto(porcentaje) {
   return carrito_total * porcentaje / 100;
 }
 
-async function miFuncion2() {
+async function miFuncion() {
   await agregar_producto("Camisa", 20);
   await agregar_producto("Pantalón", 30);
   await mostrar_carrito();
@@ -74,4 +64,4 @@ async function miFuncion2() {
   console.log("Impuesto (10%): " + calcular_impuesto(10));
 }
 
-miFuncion2();
+miFuncion();
